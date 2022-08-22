@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
+using static BlogAPI.Src.Utility.Enum;
 
 namespace BlogAPI.Src.Models
 {
@@ -29,6 +30,8 @@ namespace BlogAPI.Src.Models
 
         [JsonIgnore, InverseProperty("Author")]
         public List<Post> MyPosts { get; set; }
+        [Required]
+        public UserType Type { get; set; }
         #endregion
     }
 }
