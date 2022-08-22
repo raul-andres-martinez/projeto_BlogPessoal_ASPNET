@@ -47,9 +47,12 @@ namespace BlogAPI.Src.Controllers
             return Ok(list);
         }
         ///<summary>
-        /// Pegar todos posts
+        /// Pegar post por id
         /// </summary>
         /// <param name="id_post">Pegar post por id</param>
+        /// <remarks>
+        /// GET /api/Postagens/{ID}
+        /// </remarks>
         /// <returns>ActionResult</returns>
         /// <response code="200">Retorna post</response>
         /// <response code="404">Post não existente</response>
@@ -133,7 +136,7 @@ namespace BlogAPI.Src.Controllers
             }
         }
         /// <summary>
-        /// Pegar todos posts
+        /// Deletar post por id
         /// </summary>
         /// <param name="id_post">Deletar post por id</param>
         /// <returns>ActionResult</returns>
