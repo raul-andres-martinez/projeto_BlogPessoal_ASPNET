@@ -13,6 +13,7 @@ namespace BlogAPI.Src.Services.Implements
     /// <summary>
     /// <para>Resumo: Classe responsavel por implementar a autenticação</para>
     /// <para>Criado por: Raul e Generation</para>
+    /// </summary>
     public class AuthenticationServices : IAuthentication
     {
         #region Attributes

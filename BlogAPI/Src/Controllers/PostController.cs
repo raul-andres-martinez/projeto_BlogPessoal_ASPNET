@@ -29,12 +29,12 @@ namespace BlogAPI.Src.Controllers
         #endregion
 
         #region Methods
-        ///<summary>
+        /// <summary>
         /// Pegar todos posts
+        /// </summary>
         /// <param>Pegar todos os posts</param>
         /// <returns>ActionResult</returns>
         /// <response code="200">Retorna todos posts</response>
-        /// </summary>
 
         [HttpGet]
         [Authorize]
@@ -48,11 +48,11 @@ namespace BlogAPI.Src.Controllers
         }
         ///<summary>
         /// Pegar todos posts
+        /// </summary>
         /// <param name="id_post">Pegar post por id</param>
         /// <returns>ActionResult</returns>
         /// <response code="200">Retorna post</response>
         /// <response code="404">Post não existente</response>
-        /// </summary>
         [HttpGet("id/{id_post}")]
         [Authorize]
         public async Task<ActionResult> GetPostByIdAsync([FromRoute] int id_post)
@@ -68,6 +68,7 @@ namespace BlogAPI.Src.Controllers
         }
         /// <summary>
         /// Criar novo post
+        /// </summary>
         /// <param name="post">Contrutor para criar post</param>
         /// <returns>ActionResult</returns>
         /// <remarks>
@@ -83,7 +84,6 @@ namespace BlogAPI.Src.Controllers
         /// </remarks>
         /// <response code="201">Retorna post criado</response>
         /// <response code="400">Erro de entrada</response>
-        /// </summary>
 
 
         [HttpPost]
@@ -102,6 +102,7 @@ namespace BlogAPI.Src.Controllers
         }
         /// <summary>
         /// Atualizar post
+        /// </summary>
         /// <param name="post">Contrutor para atualizar post</param>
         /// <returns>ActionResult</returns>
         /// <remarks>
@@ -117,7 +118,6 @@ namespace BlogAPI.Src.Controllers
         /// </remarks>
         /// <response code="200">Retorna post atualizado</response>
         /// <response code="400">Erro de entrada</response>
-        /// </summary>
         [HttpPut]
         [Authorize]
         public async Task<ActionResult> UpdatePostAsync([FromBody] Post post)
@@ -134,11 +134,11 @@ namespace BlogAPI.Src.Controllers
         }
         /// <summary>
         /// Pegar todos posts
+        /// </summary>
         /// <param name="id_post">Deletar post por id</param>
         /// <returns>ActionResult</returns>
         /// <response code="200">Retorna post deletado</response>
         /// <response code="404">Post não existente</response>
-        /// </summary>
         [HttpDelete("deletar/{id_post}")]
         [Authorize]
         public async Task<ActionResult> DeletePostAsync([FromRoute] int id_post)

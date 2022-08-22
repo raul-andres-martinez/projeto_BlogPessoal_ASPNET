@@ -37,12 +37,12 @@ namespace BlogAPI
         public void ConfigureServices(IServiceCollection services)
         {
             // CONTEXTO / Configurações de Banco de dados mySQL
-            if (Configuration["Enviroment: Start"] == "PROD")
+            if (Configuration["Enviroment:Start"] == "PROD")
             {
                 services.AddEntityFrameworkNpgsql()
-                    .AddDbContext<BlogPessoalContext>(
-                    opt => opt.UseNpgsql(Configuration["ConnectionsStringsProd:DefaultConnection"]));
-                    )
+                .AddDbContext<BlogPessoalContext>(
+                opt =>
+                opt.UseNpgsql(Configuration["ConnectionStringsProd:DefaultConnection"]));
             }
             else {
                 var connectionString = Configuration.GetConnectionString("DefaultConnection");
